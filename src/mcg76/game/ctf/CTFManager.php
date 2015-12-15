@@ -507,7 +507,6 @@ class CTFManager  extends MiniGameBase  {
 		$player->sendMessage ( TextFormat::BLUE.$this->getMsg ( "team.welcome-blue" ) );
 		$player->getLevel()->getBlockLightAt($blueTeamEntryPos->x, $blueTeamEntryPos->y, $blueTeamEntryPos->z);
 		
-		$this->getGameKit ()->putOnGameKit ( $player, CTFGameKit::KIT_BLUE_TEAM );
 		$player->sendMessage ( TextFormat::GRAY.$this->getMsg ( "team.tap-start" ) );
 		
 		$this->getPlugIn ()->blueTeamPLayers [$player->getName ()] = $player;
@@ -536,7 +535,6 @@ class CTFManager  extends MiniGameBase  {
 		$player->sendMessage ( TextFormat::DARK_RED.$this->getMsg ( "team.welcome-red" ) );
 		$player->getLevel()->getBlockLightAt($redTeamEntryPos->x, $redTeamEntryPos->y, $redTeamEntryPos->z);
 		
-		$this->getGameKit ()->putOnGameKit ( $player, CTFGameKit::KIT_RED_TEAM );
 		$player->sendMessage ( TextFormat::GRAY.$this->getMsg ( "team.tap-start" ) );
 		$this->getPlugIn ()->redTeamPlayers [$player->getName ()] = $player;
 		$player->setNameTag (TextFormat::RED. $this->getMsg ( "team.red" ) . " | " . $player->getName () );
